@@ -5,11 +5,13 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { HeaderComponentComponent } from './header-component.component';
+import { TaskManagerComponentComponent } from './task-manager-component/task-manager-component.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponentComponent
+    HeaderComponentComponent,
+    TaskManagerComponentComponent
   ],
   imports: [
     BrowserModule,
