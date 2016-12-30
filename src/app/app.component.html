@@ -1,16 +1,23 @@
 <app-header-component></app-header-component>
-<section class="todoapp">
+<div class="container">
+<section class="container todoapp" style="background-color:silver">
   <header class="header">
+
     <h1>Todos</h1>
-    <input class="new-todo" placeholder="What needs to be done?" autofocus="" [(ngModel)]="newTodo.title" (keyup.enter)="addTodo()">
+    <div class="col-md-5 well form-group label-floating is-empty" >
+    <label style="color: black" for="i5" class="control-label">What needs to be done?</label>
+    <input autofocus="" [(ngModel)]="newTodo.title" (keyup.enter)="addTodo()" class="form-control" id="i5">
+    <span class="help-block" style="color:seagreen">eg: Study programming today at 12am</span>
+  </div>
+    
   </header>
-  <section class="main" *ngIf="todos.length > 0">
-    <ul class="todo-list">
-      <li *ngFor="let todo of todos" [class.completed]="todo.complete">
-        <div class="view">
-          <input class="toggle" type="checkbox" (click)="toggleTodoComplete(todo)" [checked]="todo.complete">
-          <label>{{todo.title}}</label>
-          <button class="destroy" (click)="removeTodo(todo)"></button>
+  <section class="col-md-7  main" *ngIf="todos.length > 0">
+    <ul class="well todo-list">
+      <li style="list-style-type: none" *ngFor="let todo of todos" [class.completed]="todo.complete">
+        <div class="form-group view" style="background-color:khaki">
+          <input class="checkbox" type="togglebutton" (click)="toggleTodoComplete(todo)" [checked]="todo.complete">
+          <label class="form-control" style="text-align: center; color: black; font-size:x-large;">{{todo.title}}</label>
+          <button class="form-control btn btn-raised btn-danger destroy" (click)="removeTodo(todo)">Delete Task</button>
         </div>
       </li>
     </ul>
@@ -19,3 +26,4 @@
     <span class="todo-count"><strong>{{todos.length}}</strong> {{todos.length == 1 ? 'item' : 'items'}} left</span>
   </footer>
 </section>
+</div>
