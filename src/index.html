@@ -2,13 +2,49 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>TodoApp</title>
+  <title>TodoListapp</title>
   <base href="/">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="http://fezvrasta.github.io/bootstrap-material-design/dist/css/bootstrap-material-design.css" >
+
+<script src="https://www.gstatic.com/firebasejs/3.6.4/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBzih4Kkc1x7weqL6EctqB8BT_v9Zh6UBc",
+    authDomain: "todo-list-1ef09.firebaseapp.com",
+    databaseURL: "https://todo-list-1ef09.firebaseio.com",
+    storageBucket: "todo-list-1ef09.appspot.com",
+    messagingSenderId: "489406168595"
+  };
+  firebase.initializeApp(config);
+</script>
+<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+<script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+<script id="_carbonads_projs" type="text/javascript" src="//srv.carbonads.net/ads/C6AILKT.json?segment=placement:fezvrastagithubiobootstrapmateri&amp;callback=_carbonads_go"></script>
 </head>
 <body>
   <app-root>Loading...</app-root>
+  <div class="container">
+  <div class="jumbotron">
+  <h1 class="display-3">To-Do App</h1>
+  <p class="lead">This application is created by a web developer Sheheryar khan</p>
+  <hr class="my-2">
+  <p>To Do list is a task assignong application you can and check your task to completed.</p>
+  <p class="lead">
+    <a class="btn btn-primary btn-lg" href="https://en.wikipedia.org/wiki/Wikipedia:To-do_list" role="button">Learn more</a>
+  </p>
+</div>
+</div>
+<script src="http://fezvrasta.github.io/bootstrap-material-design/dist/js/material.js"></script>
+<script src="http://fezvrasta.github.io/bootstrap-material-design/dist/js/ripples.min.js"></script>
+<script>
+ 
+  $.material.init();
+ 
+</script>
 </body>
 </html>
