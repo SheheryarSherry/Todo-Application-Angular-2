@@ -12,13 +12,25 @@
     
   </header>
   <section class="col-md-7  main" *ngIf="todos.length > 0">
-    <ul class="well todo-list">
+    <ul class=" todo-list" style="background-color:darkgray">
       <li style="list-style-type: none" *ngFor="let todo of todos" [class.completed]="todo.complete">
-        <div class="form-group view" style="background-color:khaki">
-          <input class="checkbox" type="togglebutton" (click)="toggleTodoComplete(todo)" [checked]="todo.complete">
-          <label class="form-control" style="text-align: center; color: black; font-size:x-large;">{{todo.title}}</label>
+        <div class="panel panel-success">
+         
+          
+  <div class="panel-heading">
+    
+    <h3 class="panel-title">Task number {{todos.length == 1 ? 'item' : 'items'}}</h3>
+  </div>
+  <span><input class="checkbox" type="checkbox" (click)="toggleTodoComplete(todo)" [checked]="todo.complete"> </span> 
+  <div class="panel-body">
+    <!--<label style="text-align: center; font-size:x-large; font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif" class="form-control">{{todo-title}}</label>-->
+ <label class="form-control" style="text-align: center; color: black; font-size:large;">{{todo.title}}</label>
+  </div> 
+  
           <button class="form-control btn btn-raised btn-danger destroy" (click)="removeTodo(todo)">Delete Task</button>
-        </div>
+</div>
+          
+        
       </li>
     </ul>
   </section>
